@@ -1,0 +1,388 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+li{
+    list-style: none;
+    display: flex;
+    align-items: center;
+    margin: 20px;
+}
+
+body {
+    background-color: #DDD0C8;
+    color: #323232;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    padding-top: 80px; /* Ensure body content is not hidden under fixed navbar */
+}
+
+header {
+    width: 100%;
+}
+
+nav {
+    height: 80px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #DDD0C8;
+    padding: 0 20px;
+    border-bottom: 2px solid #323232;
+    position: fixed; /* Fixes the nav bar at the top */
+    top: 0;
+    left: 0;
+    z-index: 1000; /* Ensures it stays on top of other elements */
+}
+
+.profile_name {
+    display: flex;
+    align-items: center;
+}
+
+h2 {
+    font-size: 1.8rem;
+    margin-right: 10px;
+    font-weight: 300;
+}
+
+span.auto_type {
+    font-size: 2.8rem;
+    color: #323232;
+    font-weight: 600;
+    display: inline-block;
+    white-space: nowrap;
+    overflow: hidden;
+    border-right: 3px solid #323232;
+    animation: typewriter 4s steps(40, end), blink 0.75s step-end infinite;
+}
+
+nav .menu_options {
+    position: relative;
+}
+
+nav .menu_options ul {
+    display: flex;
+    list-style: none;
+}
+
+nav .menu_options li {
+    margin: 0 15px;
+}
+
+nav .menu_options a {
+    color: #323232;
+    text-decoration: none;
+    font-size: 1.5rem;
+    font-weight: 600;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+nav .menu_options a:hover {
+    color: #666;
+    transform: translateY(-2px);
+}
+
+nav .menu_options input[type="checkbox"] {
+    display: none;
+}
+
+nav .menu_options .hamburger {
+    display: none;
+    font-size: 2rem;
+    cursor: pointer;
+}
+
+.intro {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #DDD0C8;
+    width: 100vw;
+    height: 100vh;
+    padding: 0 20px;
+    box-sizing: border-box;
+    position: relative;
+    overflow: hidden;
+    animation: fadeIn 1s ease-in-out;
+}
+
+.intro .about_me {
+    flex: 1;
+    max-width: 50%;
+    color: #323232;
+    animation: slideInFromLeft 1s ease-in-out;
+}
+
+.intro .about_me h3 {
+    font-size: 2.8rem;
+    margin-bottom: 20px;
+    font-weight: 600;
+    color: #1a1a1a;
+}
+
+.intro .about_me .para {
+    font-size: 1.6rem;
+    line-height: 1.6;
+    color: #555;
+}
+
+.intro .coding_photo img {
+    width: 40vw;
+    height: auto;
+    max-height: 70vh;
+    background-size: cover;
+    animation: slideInFromRight 1s ease-in-out;
+}
+
+.projects, .about, .skills {
+    background-color: #DDD0C8;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 40px 20px;
+}
+
+.projects .project_text_bar, .about .about_me_textbar, .skills .skill-name {
+    font-size: 2.5rem;
+    font-weight: 600;
+    color: #1a1a1a;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.projects .project_items, .skills .skill-list {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    width: 100%;
+    padding: 20px;
+}
+
+.projects .project_item, .skills .skill-list-items {
+    background-color: #f5f5f5;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    animation: fadeIn 1.5s ease-in-out;
+    width: 30%;
+}
+
+.about .about_information {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+.about .about_me_information {
+    max-width: 800px;
+}
+
+.about .education, .skills .heading {
+    font-size: 2rem;
+    font-weight: 600;
+    margin-bottom: 15px;
+    color: #323232;
+}
+
+.about .education-cards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.about .card {
+    background-color: #f5f5f5;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    max-width: 200px;
+    text-align: center;
+    animation: fadeIn 1s ease-in-out;
+}
+
+.about .card h4 {
+    font-size: 1.6rem;
+    font-weight: 600;
+    margin-bottom: 10px;
+    color: #1a1a1a;
+}
+
+.about .card p {
+    font-size: 1.4rem;
+    color: #555;
+}
+
+footer {
+    background-color: #DDD0C8;
+    color: #323232;
+    padding: 20px;
+    text-align: center;
+    width: 100%;
+    box-shadow: 0 -2px 6px rgba(0, 0, 0, 0.1);
+}
+
+footer p {
+    font-size: 1.2rem;
+}
+
+@keyframes typewriter {
+    from {
+        width: 0;
+    }
+    to {
+        width: 100%;
+    }
+}
+
+@keyframes blink {
+    50% {
+        border-color: transparent;
+    }
+}
+
+@keyframes slideInFromLeft {
+    from {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slideInFromRight {
+    from {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+    h2 {
+        font-size: 1.6rem;
+    }
+
+    span.auto_type {
+        font-size: 2rem;
+    }
+
+    .intro {
+        flex-direction: column;
+        justify-content: center;
+        padding: 40px 20px;
+    }
+
+    .intro .about_me {
+        max-width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .intro .coding_photo img {
+        width: 80%;
+    }
+
+    .projects .project_item, .skills .skill-list-items {
+        width: 45%;
+    }
+
+    nav .menu_options ul {
+        display: none;
+        position: absolute;
+        top: 80px;
+        right: 0;
+        flex-direction: column;
+        background-color: #DDD0C8;
+        width: 100%;
+        text-align: right;
+        padding: 20px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    nav .menu_options input[type="checkbox"]:checked + label + ul {
+        display: flex;
+    }
+
+    nav .menu_options .hamburger {
+        display: block;
+    }
+}
+
+@media (max-width: 480px) {
+    h2 {
+        font-size: 1.4rem;
+    }
+
+    span.auto_type {
+        font-size: 1.8rem;
+    }
+
+    .intro {
+        padding: 20px;
+    }
+
+    .intro .about_me h3 {
+        font-size: 2rem;
+    }
+
+    .intro .about_me .para {
+        font-size: 1.4rem;
+    }
+
+    .intro .coding_photo img {
+        width: 100%;
+    }
+
+    .projects .project_item, .skills .skill-list-items {
+        width: 100%;
+    }
+
+    .projects .project_text_bar, .about .about_me_textbar, .skills .skill-name {
+        font-size: 2rem;
+    }
+
+    .about .education-cards {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .about .card {
+        width: 100%;
+        max-width: 300px;
+    }
+
+    .about .card h4 {
+        font-size: 1.4rem;
+    }
+
+    .about .card p {
+        font-size: 1.2rem;
+    }
+}
